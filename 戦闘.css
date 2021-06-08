@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+*, *::before, *::after{
+	box-sizing: border-box;
+}
+
+a{
+	color: #333;
+	text-decoration: none;
+}
+
+main{
+	margin: 50px auto;
+	padding: 20px;
+	background-color: #ddd;
+	border-radius: 5px;
+	max-width: 1000px;
+	width: 100%;
+}
+
+section{
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+section h2{
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+}
+
+.enemy{
+	margin-bottom: 20px
+}
+
+.hpGauge{
+	border: 1px solid grey;
+	margin-top: 10px;
+}
+
+.hpGaugeValue{
+	height: 15px;
+	background-color: blue;
+	transition: 0.3s;
+	width: 100%;
+}
+
+.hp{
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+.hp > div:first-of-type::after{
+	content: '/';
+	margin: 0 5px;
+}
+
+.killedNumbers{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.killedNumbers > div:first-of-type::after{
+	content: '/';
+	margin: 0 5px;
+}
+
+.logs{
+	border:1px solid mediumorchid;
+	border-radius: 5px;
+	padding: 10px 15px;
+	font-size: 16px;
+	line-height: 1.8;
+	height: 250px;
+	overflow: auto;
+	margin-top: 30px;
+	box-shadow: 0 0 3px 0 mediumorchid inset;
+}
+
+.attack{
+	margin:50px auto 0;
+	width: 200px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #efe; 
+	cursor: pointer;
+}
+
+.attack.deactive{
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+.mask{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .6);
+	transition: .3s;
+	opacity: 0;
+	visibility: hidden;
+}
+.mask.active{
+	opacity: 1s;
+	visibility: visible;
+}
+
+.modal{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 30px;
+	background-color: rgba(255, 255, 255, 0.796);
+	border-radius: 10px;
+	min-width: 500px;
+	transition: .3s;
+	opacity: 0;
+	visibility: hidden;
+}
+.modal.active{
+	opacity: 1;
+	visibility: visible;
+}
+
+.modalTitle{
+	font-weight: bold;
+	font-size: 30px;
+	text-align: center;
+}
+
+.modalNextButton{
+	margin:50px auto 0;
+	width: 200px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #28f; 
+	cursor: pointer;
+}
+
+.modalNextButton.hidden{
+	display: none;
+}
