@@ -1,0 +1,63 @@
+<!doctype html>
+<html class="no-js" lang="ja">
+
+<head>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="戦闘.css">
+  <title>戦闘ゲーム</title>
+  <script src="戦闘.js" defer></script>
+</head>
+<body>
+	<main>
+		<section class="enemy">
+			<h2 id="enemyName"></h2>
+
+			<div class="hpGauge">
+				<div class="hpGaugeValue" id="currentEnemyHpGuageValue">
+
+				</div>
+			</div>
+
+			<div class="hp">
+				<div id="currentEnemyHp"></div><div id="maxEnemyHp"></div>
+			</div>
+		</section>
+
+		<section class="player">
+			<h2 id="enemyName"></h2>
+
+			<div class="hpGauge">
+				<div class="hpGaugeValue" id="currentPlayerHpGuageValue">
+
+				</div>
+			</div>
+			<h2 id="playerName"></h2>
+
+			<div class="hp">
+				<div id="currentPlayerHp"></div><div id="maxPlayerHp"></div>
+
+			</div>
+
+			<div class="playerStatus">
+				<div class="killedNumbers">
+					討伐数：<div id="nowKilledNumber"></div><div id="targetKillsNumber"></div>
+				</div>
+			</div>
+
+			<ul id="logs" class="logs"></ul>
+			
+		<button id="attack" class="attack">攻撃</button>
+
+		</section>
+
+	</main>
+<div class="mask" id="mask"></div>
+<div class="modal" id="modal">
+<div class="modalTitle" id="modalTitle"></div>
+<a class="modalNextButton" id="modalNextButton">次へ進む</a>
+</div>
+</body>
+
+</html>
+
